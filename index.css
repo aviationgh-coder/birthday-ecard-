@@ -1,18 +1,25 @@
-body {
-    display: block;
-    width: 960px;
-    min-width: 25%;
-    background-image: url("./my\ backgroundjpg.jpg");
-    background-size: 960px;
-    min-width: 40%;
-    margin: 0 auto;
-    place-items: center;
-    padding-top: 20px;
-
+* {
+    box-sizing: border-box;
+    height: fit-content;
 }
 
+body {
+    display: block;
+    width: 100vw;
+    height: auto;
+    max-width: 960px;
+    background-image: url("./000.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-
+    @media(width < 60rem) {
+        padding-top: 150px;
+    }
+}
 
 div,
 p,
@@ -22,13 +29,11 @@ img {
     vertical-align: -webkit-baseline-middle;
 }
 
-
-
 .kablammo {
     font-family: "Kablammo", "Mea Culpa", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 25px;
+    font-size: clamp(18px, 4vw, 25px);
     font-style: normal;
     letter-spacing: 1px;
     font-variation-settings: "MORF" 0;
@@ -37,6 +42,7 @@ img {
     animation-timing-function: ease-in-out;
     transition-delay: 0.5s;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 @keyframes wishFyou {
@@ -50,7 +56,6 @@ img {
     }
 }
 
-
 a {
     text-decoration: none;
     color: rgb(169, 96, 7);
@@ -62,15 +67,17 @@ a {
 }
 
 #button {
-
     border: 4px solid rgba(222, 201, 66, 0.625);
     border-radius: 10px;
-    width: 200px;
+    width: 90%;
+    max-width: 200px;
+    padding: 10px 20px;
     animation-name: bordertrans;
     animation-duration: 300ms;
     animation-timing-function: cubic-bezier(.04, .4, .82, .48);
     animation-iteration-count: infinite;
-
+    font-size: clamp(14px, 3vw, 25px);
+    cursor: pointer;
 }
 
 @keyframes bordertrans {
@@ -110,23 +117,24 @@ a {
     }
 }
 
-
-
 .outerb {
     display: flex;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     background-image: url("./background.png");
-    height: 540px;
+    height: auto;
+    aspect-ratio: 800 / 540;
     position: relative;
     border: 2px solid whitesmoke;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     animation-name: outerAni;
-    animation-duration: 1000ms;
+    animation-duration: 1500ms;
     animation-timing-function: cubic-bezier(.04, .4, .82, .48);
     animation-iteration-count: infinite;
     transition-delay: 0.5s;
+    margin: 0 auto;
 }
 
 @keyframes outerAni {
@@ -135,8 +143,16 @@ a {
         background-image: url("./background.png");
     }
 
-    50% {
+    25% {
         background-image: url("./background2a.png");
+    }
+
+    50% {
+        background-image: url("./background2.png");
+    }
+
+    65% {
+        background-image: url("./background.png");
     }
 
     100% {
@@ -158,18 +174,17 @@ a {
 }
 
 .main {
-
     display: flex;
     flex-direction: column;
     border: 2px solid white;
     border-radius: 20px;
-    width: 500px;
-    height: 340px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
     background: rgb(247, 212, 109);
     position: relative;
     align-items: center;
     justify-content: center;
-
 }
 
 #greet {
@@ -180,67 +195,91 @@ a {
     position: relative;
     align-items: center;
     padding-bottom: 10px;
+    font-size: clamp(20px, 5vw, 40px);
+    text-align: center;
+
 }
 
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    gap: 10px;
 
-
+}
 
 #footer {
     color: rgb(25, 1, 1);
     position: relative;
-    float: left;
-    padding-right: 250px;
-
+    font-size: clamp(12px, 2vw, 14px);
+    background-color: rgb(247, 221, 144);
+    border-radius: 5px;
+    width: 6rem;
+    text-align: center;
 }
 
 #now {
     color: rgb(25, 1, 1);
     position: relative;
-    float: right;
-    padding-left: 250px;
-
+    font-size: clamp(12px, 2vw, 14px);
+    background-color: rgb(247, 221, 144);
+    border-radius: 5px;
+    width: 9rem;
+    text-align: center;
 }
 
 #mediaB {
     display: block;
-    width: 960px;
-    min-width: 40%;
-    background-image: url("./my\ backgroundjpg.jpg");
+    width: 100%;
+    max-width: 960px;
+    background-image: url("./000.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0 auto;
-    place-items: center;
-    justify-content: center;
-
+    padding: 10px;
 }
 
 video {
     display: block;
-    padding-right: 0px;
-    width: 840px;
-    height: 560px;
+    width: 100%;
+    height: auto;
+    max-width: 840px;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
 }
 
 .videobg {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 80px 0px 0px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 
-    justify-content: center;
-
+    @media(width < 60rem) {
+        padding-top: 80px;
+    }
 }
 
 #back {
-
     background-color: rgb(225, 223, 223);
     border-radius: 5px;
-    width: 80px;
+    padding-right: 10px;
     color: rgb(169, 96, 7);
-    padding: 5px 5px 5px -45px;
+    font-size: clamp(14px, 3vw, 16px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back:hover {
+    background-color: rgb(200, 195, 195);
 }
 
 #backmove {
-    padding-right: 40px;
-
-
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
 }
