@@ -1,82 +1,102 @@
 * {
     box-sizing: border-box;
-    height: fit-content;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    margin: 0 auto;
+    gap: 0px;
+    display: flex 1;
 }
 
 body {
-    display: block;
+    display: flex 1;
     width: 100vw;
-    height: auto;
-    max-width: 960px;
+    height: 100vh;
     background-image: url("./000.jpg");
     background-size: cover;
     background-attachment: fixed;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 
-    @media(width < 60rem) {
-        padding-top: 150px;
-    }
-}
-
-div,
-p,
-img {
-    margin: 0 auto;
-    font-size: 100%;
-    vertical-align: -webkit-baseline-middle;
 }
 
 .kablammo {
     font-family: "Kablammo", "Mea Culpa", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: clamp(18px, 4vw, 25px);
-    font-style: normal;
-    letter-spacing: 1px;
-    font-variation-settings: "MORF" 0;
+    font-size: clamp(1.2rem, 2.5vw, 6rem);
+    letter-spacing: 0.5px;
     animation-name: wishFyou;
     animation-duration: 1000ms;
     animation-timing-function: ease-in-out;
     transition-delay: 0.5s;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     text-align: center;
+
+    @keyframes wishFyou {
+
+        0% {
+            opacity: 0%;
+        }
+
+        50% {
+            opacity: 50%;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+    }
 }
 
-@keyframes wishFyou {
-
-    0% {
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
 
 a {
     text-decoration: none;
     color: rgb(169, 96, 7);
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
+    letter-spacing: 1.0px;
+}
 
+b {
+    font-family: MV Boli, Georgia, Times, 'Times New Roman', serif;
+    display: flex-wrap;
+    line-height: 0px;
+    text-align: center;
+    align-items: center;
+    font-size: clamp(1.2rem, 3vw, 4rem);
 }
 
 #button {
     border: 4px solid rgba(222, 201, 66, 0.625);
-    border-radius: 10px;
-    width: 90%;
-    max-width: 200px;
+
+    @media(width >=40em) {
+        border: 6px solid rgba(222, 201, 66, 0.625);
+    }
+
+    @media(width >=60em) {
+        border: 24px solid rgba(222, 201, 66, 0.625);
+    }
+
+    @media(width >=80em) {
+        border: 32px solid rgba(222, 201, 66, 0.625);
+    }
+
+    @media(width >=120em) {
+        border: 80px solid rgba(222, 201, 66, 0.625);
+    }
+
+    @media(width >=140em) {
+        border: 480px solid rgba(222, 201, 66, 0.625);
+    }
+
+
+    display:flex 1;
+    border-radius: 30px;
+    width: 60%;
+    height:auto;
+    justify-content:center;
     padding: 10px 20px;
     animation-name: bordertrans;
     animation-duration: 300ms;
     animation-timing-function: cubic-bezier(.04, .4, .82, .48);
     animation-iteration-count: infinite;
-    font-size: clamp(14px, 3vw, 25px);
     cursor: pointer;
 }
 
@@ -117,13 +137,19 @@ a {
     }
 }
 
+div#greet.fade {
+    padding-bottom: 10px;
+    font-family: Brush Script MT, cursive, fantasy;
+    font-size: clamp(1.5rem, 5vw, 5rem);
+
+}
+
 .outerb {
     display: flex;
-    width: 100%;
-    max-width: 800px;
+    width: 90%;
     background-image: url("./background.png");
     height: auto;
-    aspect-ratio: 800 / 540;
+    aspect-ratio: 600 / 220;
     position: relative;
     border: 2px solid whitesmoke;
     border-radius: 20px;
@@ -134,7 +160,6 @@ a {
     animation-timing-function: cubic-bezier(.04, .4, .82, .48);
     animation-iteration-count: infinite;
     transition-delay: 0.5s;
-    margin: 0 auto;
 }
 
 @keyframes outerAni {
@@ -161,16 +186,13 @@ a {
 }
 
 .fade {
-    padding-bottom: 130px;
     display: block;
     opacity: 0;
     transition: opacity 3s ease-in-out;
-
 }
 
 .fade.show {
     opacity: 1;
-
 }
 
 .main {
@@ -178,71 +200,107 @@ a {
     flex-direction: column;
     border: 2px solid white;
     border-radius: 20px;
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
+    height: 80vh;
+    width: 80%;
+    max-width: 100vh;
     background: rgb(247, 212, 109);
-    position: relative;
     align-items: center;
     justify-content: center;
+    margin: 20px 0px 20px 0px;
+    aspect-ratio: 600 / 220;
 }
 
 #greet {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     color: rgb(235, 235, 231);
     letter-spacing: 2px;
-    position: relative;
-    align-items: center;
-    padding-bottom: 10px;
-    font-size: clamp(20px, 5vw, 40px);
+    justify-content: center;
     text-align: center;
-
+    margin: 0 auto;
 }
 
 footer {
+    padding: 10px 0px 15px 0px;
+    justify-content: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 20px;
-    gap: 10px;
+    align-items: center;
+    margin-left: 0;
 
+    @media(width > 310px) {
+        display: grid;
+
+    }
+
+    @media(width > 758px) {
+        display: flex;
+    }
 }
 
 #footer {
     color: rgb(25, 1, 1);
     position: relative;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: 0.5rem;
     background-color: rgb(247, 221, 144);
     border-radius: 5px;
-    width: 6rem;
+    width: 5rem;
+
+    @media(width>310px) {
+        margin-top: 10px;
+    }
+
+    @media(width>758px) {
+        margin-top: 0px;
+    }
+
     text-align: center;
+    float:inline-start;
+
+    @media(width>=40em) {
+        font-size: 0.55rem;
+    }
+
+    @media(width>=60em) {
+        font-size: 0.7rem;
+    }
+
 }
 
 #now {
     color: rgb(25, 1, 1);
     position: relative;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: 0.5rem;
     background-color: rgb(247, 221, 144);
     border-radius: 5px;
-    width: 9rem;
+    width: 8rem;
     text-align: center;
+    float: inline-end;
+
+    @media(width>=40em) {
+        font-size: 0.7rem;
+    }
+
+    @media(width>=60em) {
+        font-size: 0.7rem;
+    }
 }
 
 #mediaB {
-    display: block;
+    display: flex;
     width: 100%;
+    height: auto;
     max-width: 960px;
     background-image: url("./000.jpg");
     background-size: cover;
     background-attachment: fixed;
     margin: 0 auto;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 video {
     display: block;
+    padding: 0;
     width: 100%;
     height: auto;
     max-width: 840px;
@@ -280,6 +338,18 @@ video {
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: left;
-    padding-left: 10px;
+    gap: 0;
+    padding: 0px 20px 90vh 0px;
+
 }
+
+#videospace {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 6rem 5fr;
+    grid-auto-rows: 1fr;
+    justify-content: space-around;
+    align-items: center;
+}
+
+;
