@@ -69,8 +69,9 @@ a#back {
     letter-spacing: 0.5px;
     font-size: clamp(0.8rem, 1.8vw, 2rem);
     z-index: 1;
-    padding:0px;
+    padding: 0px;
     gap: 0px;
+
     @media(width>=320px) {
         top: 10px;
         right: 30%;
@@ -183,6 +184,8 @@ div#greet.fade {
     display: flex;
     width: 90%;
     background-image: url("./background.png");
+    background-size: cover;
+    background-attachment: fixed;
     height: auto;
     aspect-ratio: 600 / 220;
     position: relative;
@@ -348,29 +351,35 @@ video {
     gap: 0px;
     margin: 0 auto;
 
-@media(width >= 20em) {
-    object-fit: fill;
+    @media(width >=20em) {
+        object-fit: fill;
         width: 100%;
         height: 55vh;
-        margin-bottom:2em;
-    };
+        margin-bottom: 2em;
+    }
 
-    @media(width >= 40em) {
-    object-fit: fill;
+    ;
+
+    @media(width >=40em) {
+        object-fit: fill;
         width: 100%;
         height: 80vh;
-        margin-bottom:0px;
-    };
-    @media(width >= 60em) {
-    object-fit: fill;
+        margin-bottom: 0px;
+    }
+
+    ;
+
+    @media(width >=60em) {
+        object-fit: fill;
         width: 100%;
         height: 80vh;
-        margin-bottom:0px;
-    };
+        margin-bottom: 0px;
+    }
+
+    ;
 }
 
 ;
-
 
 .gap {
     display: flex;
@@ -378,5 +387,5 @@ video {
     align-items: center;
     padding: 10px;
     width: 100%;
-    height: 1%;
+    height: 20px;
 }
