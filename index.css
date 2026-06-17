@@ -322,10 +322,10 @@ footer {
 #mediaB {
     display: inline-grid;
     grid-template-rows: repeat(auto, auto-fit);
-    width: 100%;
-    height: auto;
-    min-width: 100vw;
-    min-height: 100dvh;
+    width: 100vw;
+    height: 100dvh;
+    min-width: 90vw;
+    min-height: auto;
     background-image: url("./000.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -341,7 +341,7 @@ video {
     align-self: center;
     place-content: center;
     padding: 0px;
-    width: 70vw;
+    width: 75vw;
     height: 90dvh;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
