@@ -343,12 +343,14 @@ video {
     height: 90vh;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
+    gap: 0px;
+    margin: 0 auto;
 
 @media(width >= 20em) {
     object-fit: fill;
         width: 100%;
         height: 55vh;
-        margin-bottom:1.5em;
+        margin-bottom:2em;
     };
 
     @media(width >= 40em) {
