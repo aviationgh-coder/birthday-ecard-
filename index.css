@@ -339,15 +339,23 @@ video {
     align-self: center;
     place-content: center;
     padding: 0px;
-    width: 90%;
+    width: 100%;
     min-width: 86vw;
     height: 90vh;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
-@media(width>=320px) {
-   object-fit: fill; 
+
+    @media(width>=320px) {
+        object-fit: fill;
+        height: 70vh;
+    }
+     @media(width>320px) {
+        object-fit: cover;
+        height: 100vh;
+    }
+    
 }
-}
+
 ;
 
 
