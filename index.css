@@ -319,7 +319,6 @@ footer {
 
 #mediaB {
     display: inline-grid;
-    grid-template-rows: repeat(auto, auto-fit);
     width: 100vw;
     height: 100dvh;
     min-width: 70vw;
@@ -345,10 +344,7 @@ video {
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
 
-    @media(width>=320px) {
-        object-fit: contain;
-        height: 90vh;
-    }
+   
    
 }
 
