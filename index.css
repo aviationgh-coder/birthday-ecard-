@@ -72,23 +72,34 @@ a#back {
     padding: 0px;
     gap: 0px;
 
-    @media(width>=320px) {
-        top: 10px;
+    @media(width>=20em) {
+        top: 3em;
         right: 30%;
     }
 
     @media(width>470px) {
-        top: 18px;
-        right: 33%;
+        top: 2em;
+        right: 40%;
     }
 
     @media(width>=1024px) {
-        top: 16px;
-        right: 40%;
+        top: 3em;
+        right: 60%;
     }
 
 
 }
+
+a#back:hover {
+    color: rgb(238, 238, 238);
+    transition: color 300ms ease-in-out;
+    cursor: pointer;
+} 
+a:hover {
+    color:rgb(247, 212, 109);
+    transition: color 300ms ease-in-out;
+    cursor: pointer;
+} 
 
 b {
     font-family: MV Boli, libre-baskerville, Georgia, Times, 'Times New Roman', serif;
