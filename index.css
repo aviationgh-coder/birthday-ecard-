@@ -67,23 +67,21 @@ a#back {
     color: rgb(146 83 7);
     letter-spacing: 0.5px;
     font-size: clamp(1.0rem, 2.0vw, 2rem);
-    top: 50px;
-    right: 90px;
     z-index: 1;
 
-    @media(width>320px) {
-        top: 50px;
+    @media(width>=320px) {
+        top: 10px;
         right: 30%;
     }
 
-    @media(width>=375px) {
-        top: 50px;
+    @media(width>470px) {
+        top: 18px;
         right: 33%;
     }
 
     @media(width>=1024px) {
-        top: 80px;
-        right: 60%;
+        top: 16px;
+        right: 40%;
     }
 
 
@@ -341,12 +339,15 @@ video {
     align-self: center;
     place-content: center;
     padding: 0px;
-    width: 75vw;
-    height: 90dvh;
+    width: 90%;
+    min-width: 80vw;
+    height: 90vh;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
+@media(width>=320px) {
+   object-fit: fill; 
 }
-
+}
 ;
 
 
