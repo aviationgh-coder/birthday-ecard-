@@ -322,7 +322,7 @@ footer {
     grid-template-rows: repeat(auto, auto-fit);
     width: 100vw;
     height: 100dvh;
-    min-width: 90vw;
+    min-width: 70vw;
     min-height: auto;
     background-image: url("./000.jpg");
     background-size: cover;
@@ -340,20 +340,16 @@ video {
     place-content: center;
     padding: 0px;
     width: 100%;
-    min-width: 100vw;
-    height: 90vh;
+    min-width: 60vw;
+    height: 100vh;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1.5);
 
     @media(width>=320px) {
-        object-fit: fill;
-        height: 70vh;
+        object-fit: contain;
+        height: 90vh;
     }
-     @media(width>320px) {
-        object-fit: cover;
-        height: 80vh;
-    }
-    
+   
 }
 
 ;
