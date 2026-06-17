@@ -324,8 +324,7 @@ footer {
     grid-template-rows: repeat(auto, auto-fit);
     width: 100%;
     height: auto;
-
-    min-width: 70vw;
+    min-width: 100vw;
     min-height: 100dvh;
     background-image: url("./000.jpg");
     background-size: cover;
